@@ -78,5 +78,16 @@ namespace QuantityMeasurementTest
             double value2 = this.quantityMeasurement2.GetValue(5.0);
             Assert.AreEqual(value1, value2);
         }
+
+        /// <summary>
+        /// Test 1.1: To Check two feet values.
+        /// </summary>
+        [Test]
+        public void Given0InchAnd0Inch_WhenSame_ShouldReturnEqual()
+        {
+            double inchValue1 = this.quantityMeasurement.GetValue(0.0);
+            double inchValue2 = this.quantityMeasurement.GetValue(0.0);
+            Assert.AreEqual(inchValue1, inchValue2);
+        }
     }
 }
