@@ -69,7 +69,7 @@ namespace QuantityMeasurementTest
         }
 
         /// <summary>
-        /// Test 1.5: check equality for value check.
+        /// Test 1.5: check equality for Feet value check.
         /// </summary>
         [Test]
         public void GivenValueCheck_WhenEqual_ShouldReturnEqual()
@@ -119,6 +119,17 @@ namespace QuantityMeasurementTest
         public void GivenTypeObjectInInch_WhenEqual_ShouldReturnEqual()
         {
             Assert.AreEqual(this.quantityMeasurement, this.quantityMeasurement2);
+        }
+
+        /// <summary>
+        /// Test 1.10: check equality for value check in Inch.
+        /// </summary>
+        [Test]
+        public void GivenInchValueCheck_WhenEqual_ShouldReturnEqual()
+        {
+            double value1 = this.quantityMeasurement.GetValue(5.0);
+            double value2 = this.quantityMeasurement2.GetValue(5.0);
+            Assert.AreEqual(value1, value2);
         }
     }
 }
