@@ -31,7 +31,7 @@ namespace QuantityMeasurementTest
         /// Test 1.1: To Check two feet values.
         /// </summary>
         [Test]
-        public void GivenFeetValues_WhenSame_ShouldReturnEqual()
+        public void Given0FeetAnd0Feet_WhenSame_ShouldReturnEqual()
         {
             double value1 = this.quantityMeasurement.GetValue(0.0);
             double value2 = this.quantityMeasurement.GetValue(0.0);
@@ -60,12 +60,23 @@ namespace QuantityMeasurementTest
         }
 
         /// <summary>
-        /// Test 1.3: To Check equality for type.
+        /// Test 1.4: To Check equality for type.
         /// </summary>
         [Test]
-        public void GivenTypeObject_WhenEqual_ShouldReturnTrue()
+        public void GivenTypeObject_WhenEqual_ShouldReturnEqual()
         {
             Assert.AreEqual(this.quantityMeasurement, this.quantityMeasurement2);
+        }
+
+        /// <summary>
+        /// Test 1.5: To Check equality for value check.
+        /// </summary>
+        [Test]
+        public void GivenValueCheck_WhenEqual_ShouldReturnEqual()
+        {
+            double value1 = this.quantityMeasurement.GetValue(5.0);
+            double value2 = this.quantityMeasurement2.GetValue(5.0);
+            Assert.AreEqual(value1, value2);
         }
     }
 }
