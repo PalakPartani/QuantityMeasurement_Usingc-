@@ -1,18 +1,21 @@
 using NUnit.Framework;
-
 namespace QuantityMeasurementTest
 {
     public class Tests
     {
+        QuantityMeasurement.QuantityMeasurement quantityMeasurement;
         [SetUp]
         public void Setup()
         {
+            quantityMeasurement = new QuantityMeasurement.QuantityMeasurement();
         }
 
         [Test]
-        public void Test1()
+        public void GivenFeetValues_WhenSame_ShouldReturnEqual()
         {
-            Assert.Pass();
+           double value1 = quantityMeasurement.GetValue(0.0);
+           double value2= quantityMeasurement.GetValue(0.0);
+            Assert.AreEqual(value1, value2);
         }
     }
 }
