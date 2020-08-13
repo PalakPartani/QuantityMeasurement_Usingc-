@@ -28,7 +28,7 @@ namespace QuantityMeasurementTest
         }
 
         /// <summary>
-        /// Test 1.1: To Check two feet values.
+        /// Test 1.1: check two feet 0 values.
         /// </summary>
         [Test]
         public void Given0FeetAnd0Feet_WhenSame_ShouldReturnEqual()
@@ -39,7 +39,7 @@ namespace QuantityMeasurementTest
         }
 
         /// <summary>
-        /// Test 1.2: To Check equality for null.
+        /// Test 1.2: check equality for null.
         /// </summary>
         [Test]
         public void GivenNullFeetValue_ShouldReturnFalse()
@@ -48,7 +48,7 @@ namespace QuantityMeasurementTest
         }
 
         /// <summary>
-        /// Test 1.3: To Check equality for reference.
+        /// Test 1.3: check equality for reference.
         /// </summary>
         [Test]
         public void GivenReferenceObject_WhenEqual_ShouldReturnTrue()
@@ -60,7 +60,7 @@ namespace QuantityMeasurementTest
         }
 
         /// <summary>
-        /// Test 1.4: To Check equality for type.
+        /// Test 1.4: check equality for type.
         /// </summary>
         [Test]
         public void GivenTypeObject_WhenEqual_ShouldReturnEqual()
@@ -69,7 +69,7 @@ namespace QuantityMeasurementTest
         }
 
         /// <summary>
-        /// Test 1.5: To Check equality for value check.
+        /// Test 1.5: check equality for value check.
         /// </summary>
         [Test]
         public void GivenValueCheck_WhenEqual_ShouldReturnEqual()
@@ -80,7 +80,7 @@ namespace QuantityMeasurementTest
         }
 
         /// <summary>
-        /// Test 1.1: To Check two feet values.
+        /// Test 1.6: check two 0 inch values.
         /// </summary>
         [Test]
         public void Given0InchAnd0Inch_WhenSame_ShouldReturnEqual()
@@ -88,6 +88,15 @@ namespace QuantityMeasurementTest
             double inchValue1 = this.quantityMeasurement.GetValue(0.0);
             double inchValue2 = this.quantityMeasurement.GetValue(0.0);
             Assert.AreEqual(inchValue1, inchValue2);
+        }
+
+        /// <summary>
+        /// Test 1.7: check equality for null.
+        /// </summary>
+        [Test]
+        public void GivenNullInchValue_ShouldReturnFalse()
+        {
+            Assert.IsFalse(this.quantityMeasurement.Equals(null));
         }
     }
 }
