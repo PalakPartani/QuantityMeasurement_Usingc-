@@ -98,5 +98,17 @@ namespace QuantityMeasurementTest
         {
             Assert.IsFalse(this.quantityMeasurement.Equals(null));
         }
+
+        /// <summary>
+        /// Test 1.8: check equality for reference in Inch.
+        /// </summary>
+        [Test]
+        public void GivenReferenceObjectForInch_WhenEqual_ShouldReturnTrue()
+        {
+            double value1 = this.quantityMeasurement.GetValue(0.0);
+            double value2 = this.quantityMeasurement2.GetValue(0.0);
+            bool data = value1.Equals(value2);
+            Assert.IsTrue(data);
+        }
     }
 }
