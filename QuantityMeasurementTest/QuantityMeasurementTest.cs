@@ -110,5 +110,15 @@ namespace QuantityMeasurementTest
             bool data = value1.Equals(value2);
             Assert.IsTrue(data);
         }
+
+
+        /// <summary>
+        /// Test 1.9: check equality for type in inch.
+        /// </summary>
+        [Test]
+        public void GivenTypeObjectInInch_WhenEqual_ShouldReturnEqual()
+        {
+            Assert.AreEqual(this.quantityMeasurement, this.quantityMeasurement2);
+        }
     }
 }
