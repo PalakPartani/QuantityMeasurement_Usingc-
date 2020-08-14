@@ -196,5 +196,16 @@ namespace QuantityMeasurementTest
             double value2 = this.quantityMeasurement2.GetValue(1.0, QuantityMeasurement.BaseUnits.Units.YARD);
             Assert.AreEqual(value1, value2);
         }
+
+        /// <summary>
+        /// Test 1.16: check equality for values of 1Feet & 1Yard.
+        /// </summary>
+        [Test]
+        public void GivenOneFeetandOneYardValueCheck_WhenNotEqual_ShouldReturnNotEqual()
+        {
+            double value1 = this.quantityMeasurement.GetValue(1.0, QuantityMeasurement.BaseUnits.Units.FEET);
+            double value2 = this.quantityMeasurement2.GetValue(1.0, QuantityMeasurement.BaseUnits.Units.YARD);
+            Assert.AreNotEqual(value1, value2);
+        }
     }
 }
