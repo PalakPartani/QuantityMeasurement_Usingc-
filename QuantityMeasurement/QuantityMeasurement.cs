@@ -19,6 +19,7 @@ namespace QuantityMeasurement
         public double GetValue(double value, BaseUnits.Units units)
         {
             return value * this.units.GetconvertedUnit(units);
+            
         }
 
         /// <summary>
