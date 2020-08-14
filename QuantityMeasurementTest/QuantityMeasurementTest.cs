@@ -187,7 +187,7 @@ namespace QuantityMeasurementTest
         }
 
         /// <summary>
-        /// Test 1.16: check equality for values of 1Feet & 12Inch.
+        /// Test 1.11: check equality for values of 1Feet & 12Inch.
         /// </summary>
         [Test]
         public void GivenThreeFeetandOneYardValueCheck_WhenEqual_ShouldReturnEqual()
@@ -198,7 +198,7 @@ namespace QuantityMeasurementTest
         }
 
         /// <summary>
-        /// Test 1.16: check equality for values of 1Feet & 1Yard.
+        /// Test 1.12: check equality for values of 1Feet & 1Yard.
         /// </summary>
         [Test]
         public void GivenOneFeetandOneYardValueCheck_WhenNotEqual_ShouldReturnNotEqual()
@@ -209,7 +209,7 @@ namespace QuantityMeasurementTest
         }
 
         /// <summary>
-        /// Test 1.16: check equality for values of 1Feet & 1Yard.
+        /// Test 1.13: check equality for values of 1Feet & 1Yard.
         /// </summary>
         [Test]
         public void GivenOneInchandOneYardValueCheck_WhenNotEqual_ShouldReturnNotEqual()
@@ -220,7 +220,7 @@ namespace QuantityMeasurementTest
         }
 
         /// <summary>
-        /// Test 1.16: check equality for values of 1Feet & 12Inch.
+        /// Test 1.14: check equality for values of 1Feet & 12Inch.
         /// </summary>
         [Test]
         public void GivenOneYardAndThirtySixInchValueCheck_WhenEqual_ShouldReturnEqual()
@@ -231,7 +231,7 @@ namespace QuantityMeasurementTest
         }
 
         /// <summary>
-        /// Test 1.16: check equality for values of 1Feet & 12Inch.
+        /// Test 1.15: check equality for values of 1Feet & 12Inch.
         /// </summary>
         [Test]
         public void GivenThirtySixInchAndOneYardValueCheck_WhenEqual_ShouldReturnEqual()
@@ -249,6 +249,28 @@ namespace QuantityMeasurementTest
         {
             double value1 = this.quantityMeasurement.GetValue(1.0, QuantityMeasurement.BaseUnits.Units.YARD);
             double value2 = this.quantityMeasurement2.GetValue(3.0, QuantityMeasurement.BaseUnits.Units.FEET);
+            Assert.AreEqual(value1, value2);
+        }
+
+        /// <summary>
+        /// Test 1.17: check equality for values of Two inch to five cm.
+        /// </summary>
+        [Test]
+        public void GivenTwoInchAndFiveCMValueCheck_WhenEqual_ShouldReturnEqual()
+        {
+            double value1 = this.quantityMeasurement.GetValue(2.0, QuantityMeasurement.BaseUnits.Units.INCH);
+            double value2 = this.quantityMeasurement2.GetValue(5.0, QuantityMeasurement.BaseUnits.Units.CM);
+            Assert.AreEqual(value1, value2);
+        }
+
+        /// <summary>
+        /// Test 1.1: check two cm 0 values.
+        /// </summary>
+        [Test]
+        public void Given0InchAnd0CM_WhenSame_ShouldReturnEqual()
+        {
+            double value1 = this.quantityMeasurement.GetValue(0.0, QuantityMeasurement.BaseUnits.Units.INCH);
+            double value2 = this.quantityMeasurement.GetValue(0.0, QuantityMeasurement.BaseUnits.Units.CM);
             Assert.AreEqual(value1, value2);
         }
     }

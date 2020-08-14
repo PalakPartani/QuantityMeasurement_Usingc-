@@ -17,6 +17,7 @@ namespace QuantityMeasurement
             FEET,
             INCH,
             YARD,
+            CM,
         }
 
         /// <summary>
@@ -39,6 +40,11 @@ namespace QuantityMeasurement
             if (units == Units.YARD)
             {
                 return 36.0;
+            }
+
+            if (units == Units.CM)
+            {
+                return 1 / 2.5;
             }
 
             return 0.0;
