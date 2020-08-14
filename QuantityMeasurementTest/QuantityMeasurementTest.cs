@@ -163,5 +163,16 @@ namespace QuantityMeasurementTest
             double value2 = this.quantityMeasurement2.GetValue(1.0, QuantityMeasurement.BaseUnits.Units.FEET);
             Assert.AreNotEqual(value1, value2);
         }
+
+        /// <summary>
+        /// Test 1.11: check equality for values of Feet & Inch.
+        /// </summary>
+        [Test]
+        public void GivenOneFeetandTwelveInchValueCheck_WhenEqual_ShouldReturnNotEqual()
+        {
+            double value1 = this.quantityMeasurement.GetValue(1.0, QuantityMeasurement.BaseUnits.Units.FEET);
+            double value2 = this.quantityMeasurement2.GetValue(12.0, QuantityMeasurement.BaseUnits.Units.INCH);
+            Assert.AreEqual(value1, value2);
+        }
     }
 }
