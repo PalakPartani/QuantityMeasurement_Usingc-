@@ -20,6 +20,7 @@ namespace QuantityMeasurement
             CM,
             GALLON,
             LITRE,
+            ML,
         }
 
         /// <summary>
@@ -59,6 +60,10 @@ namespace QuantityMeasurement
                 return 1 * 3780.0;
             }
 
+            if (units == Units.ML)
+            {
+                return 1.0;
+            }
             return 0.0;
         }
    }

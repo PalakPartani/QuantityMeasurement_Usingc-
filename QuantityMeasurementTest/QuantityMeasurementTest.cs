@@ -328,5 +328,16 @@ namespace QuantityMeasurementTest
             double valueTwo = this.quantityMeasurement.GetValue(3.78, QuantityMeasurement.BaseUnits.Units.LITRE);
             Assert.AreEqual(valueOne, valueTwo);
         }
+
+        /// <summary>
+        /// Test 1.1: add values.
+        /// </summary>
+        [Test]
+        public void GivenOneLitreAndThousandMiliLitre_WhenSame_ShouldReturnEqual()
+        {
+            double valueOne = this.quantityMeasurement.GetValue(1.0, QuantityMeasurement.BaseUnits.Units.LITRE);
+            double valueTwo = this.quantityMeasurement.GetValue(1000.0, QuantityMeasurement.BaseUnits.Units.ML);
+            Assert.AreEqual(valueOne, valueTwo);
+        }
     }
 }
