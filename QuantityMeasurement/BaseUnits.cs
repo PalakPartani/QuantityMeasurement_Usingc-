@@ -29,10 +29,12 @@ namespace QuantityMeasurement
             {
                 return 12.0;
             }
-            else
+
+            if (units == Units.INCH)
             {
                 return 1.0;
             }
+            return 0.0;
         }
    }
 }
