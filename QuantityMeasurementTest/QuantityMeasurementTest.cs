@@ -295,5 +295,16 @@ namespace QuantityMeasurementTest
             double valueTwo = this.quantityMeasurement.GetValue(2.0, QuantityMeasurement.BaseUnits.Units.INCH);
             Assert.AreEqual(valueOne + valueTwo, 14);
         }
+
+        /// <summary>
+        /// Test 1.1: add values.
+        /// </summary>
+        [Test]
+        public void GivenOneFeetAndOneFeet_WhenAdded_ShouldReturnCorrectResult()
+        {
+            double valueOne = this.quantityMeasurement.GetValue(1.0, QuantityMeasurement.BaseUnits.Units.FEET);
+            double valueTwo = this.quantityMeasurement.GetValue(1.0, QuantityMeasurement.BaseUnits.Units.FEET);
+            Assert.AreEqual(valueOne + valueTwo, 24);
+        }
     }
 }
