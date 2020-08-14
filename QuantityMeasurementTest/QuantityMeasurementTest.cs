@@ -317,5 +317,16 @@ namespace QuantityMeasurementTest
             double valueTwo = this.quantityMeasurement.GetValue(2.5, QuantityMeasurement.BaseUnits.Units.CM);
             Assert.AreEqual(valueOne + valueTwo, 3);
         }
+
+        /// <summary>
+        /// Test 1.1: add values.
+        /// </summary>
+        [Test]
+        public void GivenOneGallonAndThreeptSevenEightLiters_WhenSame_ShouldReturnEqual()
+        {
+            double valueOne = this.quantityMeasurement.GetValue(1.0, QuantityMeasurement.BaseUnits.Units.GALLON);
+            double valueTwo = this.quantityMeasurement.GetValue(3.78, QuantityMeasurement.BaseUnits.Units.LITRE);
+            Assert.AreEqual(valueOne, valueTwo);
+        }
     }
 }

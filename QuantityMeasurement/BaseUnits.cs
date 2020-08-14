@@ -18,6 +18,8 @@ namespace QuantityMeasurement
             INCH,
             YARD,
             CM,
+            GALLON,
+            LITRE,
         }
 
         /// <summary>
@@ -45,6 +47,16 @@ namespace QuantityMeasurement
             if (units == Units.CM)
             {
                 return 1 / 2.5;
+            }
+
+            if (units == Units.LITRE)
+            {
+                return 1 * 1000.0;
+            }
+
+            if (units == Units.GALLON)
+            {
+                return 1 * 3780.0;
             }
 
             return 0.0;
