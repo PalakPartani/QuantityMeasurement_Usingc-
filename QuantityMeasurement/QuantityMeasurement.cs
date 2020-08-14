@@ -8,16 +8,15 @@ namespace QuantityMeasurement
     /// </summary>
     public class QuantityMeasurement
     {
-        private double inch;
-        private double feet;
         private BaseUnits units = new BaseUnits();
-       
+
         /// <summary>
         /// Method to get double values.
         /// </summary>
         /// <param name="value">Perform operation.</param>
+        /// <param name="units">taking unit.</param>
         /// <returns>value converted.</returns>
-        public double GetValue(double value,BaseUnits.Units units)
+        public double GetValue(double value, BaseUnits.Units units)
         {
             return value * this.units.GetconvertedUnit(units);
         }

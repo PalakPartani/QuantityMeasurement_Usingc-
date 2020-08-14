@@ -74,7 +74,7 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenValueCheck_WhenEqual_ShouldReturnEqual()
         {
-            double value1 = this.quantityMeasurement.GetValue(5.0,QuantityMeasurement.BaseUnits.Units.FEET);
+            double value1 = this.quantityMeasurement.GetValue(5.0, QuantityMeasurement.BaseUnits.Units.FEET);
             double value2 = this.quantityMeasurement2.GetValue(5.0, QuantityMeasurement.BaseUnits.Units.FEET);
             Assert.AreEqual(value1, value2);
         }
@@ -143,7 +143,7 @@ namespace QuantityMeasurementTest
         }
 
         /// <summary>
-        /// Test 1.11: check equality for values of Feet & Inch.
+        /// Test 1.13: check equality for values of Feet & Inch.
         /// </summary>
         [Test]
         public void GivenOneInchandOneFeetValueCheck_WhenNitEqual_ShouldReturnNotEqual()
@@ -154,7 +154,7 @@ namespace QuantityMeasurementTest
         }
 
         /// <summary>
-        /// Test 1.11: check equality for values of 1 Feet & 1 Inch.
+        /// Test 1.14: check equality for values of 1 Feet & 1 Inch.
         /// </summary>
         [Test]
         public void GivenOneFeetandOneInchValueCheck_WhenNotEqual_ShouldReturnNotEqual()
@@ -165,7 +165,7 @@ namespace QuantityMeasurementTest
         }
 
         /// <summary>
-        /// Test 1.11: check equality for values of 12 Feet & 1 Inch.
+        /// Test 1.15: check equality for values of 12 Feet & 1 Inch.
         /// </summary>
         [Test]
         public void GivenOneFeetandTwelveInchValueCheck_WhenEqual_ShouldReturnNotEqual()
@@ -176,7 +176,7 @@ namespace QuantityMeasurementTest
         }
 
         /// <summary>
-        /// Test 1.11: check equality for values of 1Feet & 12Inch.
+        /// Test 1.16: check equality for values of 1Feet & 12Inch.
         /// </summary>
         [Test]
         public void GivenTwelveFeetandOneInchValueCheck_WhenEqual_ShouldReturnNotEqual()

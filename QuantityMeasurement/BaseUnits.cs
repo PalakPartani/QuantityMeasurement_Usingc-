@@ -15,7 +15,7 @@ namespace QuantityMeasurement
         public enum Units
         {
             FEET,
-            INCH
+            INCH,
         }
 
         /// <summary>
@@ -34,6 +34,7 @@ namespace QuantityMeasurement
             {
                 return 1.0;
             }
+
             return 0.0;
         }
    }
