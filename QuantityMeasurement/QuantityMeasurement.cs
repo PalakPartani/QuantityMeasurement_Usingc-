@@ -8,7 +8,7 @@ namespace QuantityMeasurement
     /// </summary>
     public class QuantityMeasurement
     {
-     
+
         private BaseUnits units = new BaseUnits();
 
         /// <summary>
@@ -19,9 +19,12 @@ namespace QuantityMeasurement
         /// <returns>value converted.</returns>
         public double GetValue(double value, BaseUnits.Units units)
         {
-           
+            if (units.Equals(BaseUnits.Units.CELCIUS))
+            {
+               return value * this.units.GetconvertedUnit(units) +32;
+            }
            return value * this.units.GetconvertedUnit(units);
-           
+
         }
 
         /// <summary>

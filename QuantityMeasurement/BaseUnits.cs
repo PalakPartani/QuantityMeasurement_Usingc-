@@ -2,8 +2,6 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-
 namespace QuantityMeasurement
 {
     /// <summary>
@@ -24,7 +22,10 @@ namespace QuantityMeasurement
             LITRE,
             GRAMS,
             KG,
+            ML,
             TONNE,
+            FAHRENHEIT,
+            CELCIUS,
         }
 
         /// <summary>
@@ -34,58 +35,34 @@ namespace QuantityMeasurement
         /// <returns>double value.</returns>
         public double GetconvertedUnit(Units units)
         {
-            if (units == Units.FEET)
+            switch (units)
             {
-                return 12.0;
+                case Units.INCH:
+                    return 1.0;
+                case Units.FEET:
+                    return 12.0;
+                case Units.YARD:
+                    return 36.0;
+                case Units.CM:
+                    return 1 / 2.5;
+                case Units.LITRE:
+                    return 1.0;
+                case Units.GALLON:
+                    return 1 * 3.78;
+                case Units.ML:
+                    return 1.0 / 1000.0;
+                case Units.KG:
+                    return 1.0;
+                case Units.TONNE:
+                    return 1000.0;
+                case Units.GRAMS:
+                    return 1.0 / 1000.0;
+                case Units.CELCIUS:
+                    return 1.8;
+                case Units.FAHRENHEIT:
+                    return 1.0;
+                default: throw new QuantityMeasurementException("Cannot convert!", QuantityMeasurementException.ExceptionType.NOT_FOUND);
             }
-
-            if (units == Units.INCH)
-            {
-                return 1.0;
-            }
-
-            if (units == Units.YARD)
-            {
-                return 36.0;
-            }
-
-            if (units == Units.CM)
-            {
-                return 1 / 2.5;
-            }
-
-            if (units == Units.LITRE)
-            {
-                return 1.0;
-            }
-
-            if (units == Units.GRAMS)
-            {
-                Console.WriteLine("Hello");
-                return 1.0 / 1000.0;
-            }
-
-            if (units == Units.GALLON)
-            {
-                return 1 * 3.78;
-            }
-
-            if(units == Units.KG)
-            {
-                return 1.0;
-            }
-
-            if(units == Units.GRAMS)
-            {
-                return 1.0 / 1000;
-            }
-
-            if(units == Units.TONNE)
-            {
-                return 1000.0;
-            }
-
-            return 0.0;
         }
    }
 }

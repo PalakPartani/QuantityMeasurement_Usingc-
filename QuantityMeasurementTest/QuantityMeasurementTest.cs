@@ -394,5 +394,16 @@ namespace QuantityMeasurementTest
             double valueTwo = this.quantityMeasurement.GetValue(1000.0, QuantityMeasurement.BaseUnits.Units.GRAMS);
             Assert.AreEqual(1001, valueOne + valueTwo);
         }
+
+        /// <summary>
+        /// Test 1.1: check two one two fahrenheit equals hundred celcius.
+        /// </summary>
+        [Test]
+        public void GivenTwoOneTwoFahrenheitandOneHundredCelcius_WhenEqual_ShouldReturnTrue()
+        {
+            double valueOne = this.quantityMeasurement.GetValue(212, QuantityMeasurement.BaseUnits.Units.FAHRENHEIT);
+            double valueTwo = this.quantityMeasurement.GetValue(100, QuantityMeasurement.BaseUnits.Units.CELCIUS);
+            Assert.AreEqual(valueOne, valueTwo);
+        }
     }
 }
