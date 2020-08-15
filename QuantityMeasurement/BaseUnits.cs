@@ -2,6 +2,8 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+
 namespace QuantityMeasurement
 {
     /// <summary>
@@ -52,18 +54,21 @@ namespace QuantityMeasurement
 
             if (units == Units.LITRE)
             {
-                return 1 * 1000.0;
-            }
-
-            if (units == Units.GALLON)
-            {
-                return 1 * 3780.0;
+                return 1.0;
             }
 
             if (units == Units.ML)
             {
-                return 1.0;
+                Console.WriteLine("Hello");
+                return 1.0 / 1000.0;
+                
             }
+
+            if (units == Units.GALLON)
+            {
+                return 1 * 3.78;
+            }
+            
             return 0.0;
         }
    }

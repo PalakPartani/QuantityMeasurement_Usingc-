@@ -8,6 +8,7 @@ namespace QuantityMeasurement
     /// </summary>
     public class QuantityMeasurement
     {
+     
         private BaseUnits units = new BaseUnits();
 
         /// <summary>
@@ -18,8 +19,9 @@ namespace QuantityMeasurement
         /// <returns>value converted.</returns>
         public double GetValue(double value, BaseUnits.Units units)
         {
-            return value * this.units.GetconvertedUnit(units);
-            
+           
+           return value * this.units.GetconvertedUnit(units);
+           
         }
 
         /// <summary>
@@ -35,6 +37,11 @@ namespace QuantityMeasurement
             }
 
             if (obj == this)
+            {
+                return true;
+            }
+
+            if (obj.GetType() == this.GetType())
             {
                 return true;
             }
