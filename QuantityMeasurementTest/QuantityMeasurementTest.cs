@@ -383,5 +383,16 @@ namespace QuantityMeasurementTest
             double valueTwo = this.quantityMeasurement.GetValue(1000.0, QuantityMeasurement.BaseUnits.Units.KG);
             Assert.AreEqual(valueOne, valueTwo);
         }
+
+        /// <summary>
+        /// Test 1.1: check one kg is thousand grams.
+        /// </summary>
+        [Test]
+        public void GivenOneTonneandThousandGrams_WhenAdded_ShouldReturnCorrectResult()
+        {
+            double valueOne = this.quantityMeasurement.GetValue(1.0, QuantityMeasurement.BaseUnits.Units.TONNE);
+            double valueTwo = this.quantityMeasurement.GetValue(1000.0, QuantityMeasurement.BaseUnits.Units.GRAMS);
+            Assert.AreEqual(1001, valueOne + valueTwo);
+        }
     }
 }
