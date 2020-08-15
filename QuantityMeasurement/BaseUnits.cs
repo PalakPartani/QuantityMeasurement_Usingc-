@@ -22,7 +22,9 @@ namespace QuantityMeasurement
             CM,
             GALLON,
             LITRE,
-            ML,
+            GRAMS,
+            KG,
+            TONNE,
         }
 
         /// <summary>
@@ -57,18 +59,32 @@ namespace QuantityMeasurement
                 return 1.0;
             }
 
-            if (units == Units.ML)
+            if (units == Units.GRAMS)
             {
                 Console.WriteLine("Hello");
                 return 1.0 / 1000.0;
-                
             }
 
             if (units == Units.GALLON)
             {
                 return 1 * 3.78;
             }
-            
+
+            if(units == Units.KG)
+            {
+                return 1.0;
+            }
+
+            if(units == Units.GRAMS)
+            {
+                return 1.0 / 1000;
+            }
+
+            if(units == Units.TONNE)
+            {
+                return 1000.0;
+            }
+
             return 0.0;
         }
    }

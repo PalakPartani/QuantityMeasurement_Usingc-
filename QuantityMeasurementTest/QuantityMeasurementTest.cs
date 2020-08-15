@@ -336,7 +336,7 @@ namespace QuantityMeasurementTest
         public void GivenOneLitreAndThousandMiliLitre_WhenAdded_ShouldReturnEqual()
         {
             double valueOne = this.quantityMeasurement.GetValue(1.0, QuantityMeasurement.BaseUnits.Units.LITRE);
-            double valueTwo = this.quantityMeasurement.GetValue(1000.0, QuantityMeasurement.BaseUnits.Units.ML);
+            double valueTwo = this.quantityMeasurement.GetValue(1000.0, QuantityMeasurement.BaseUnits.Units.GRAMS);
             Assert.AreEqual(valueOne, valueTwo);
         }
 
@@ -358,8 +358,19 @@ namespace QuantityMeasurementTest
         public void GivenOneLiterandThousandML_WhenAdded_ShouldReturnCorrectResult()
         {
             double valueOne = this.quantityMeasurement.GetValue(1.0, QuantityMeasurement.BaseUnits.Units.LITRE);
-            double valueTwo = this.quantityMeasurement.GetValue(1000.0, QuantityMeasurement.BaseUnits.Units.ML);
+            double valueTwo = this.quantityMeasurement.GetValue(1000.0, QuantityMeasurement.BaseUnits.Units.GRAMS);
             Assert.AreEqual(2, valueOne + valueTwo);
+        }
+
+        /// <summary>
+        /// Test 1.1: check one kg is thousand grams.
+        /// </summary>
+        [Test]
+        public void GivenOneKGandThousandGrams_WhenAdded_ShouldReturnCorrectResult()
+        {
+            double valueOne = this.quantityMeasurement.GetValue(1.0, QuantityMeasurement.BaseUnits.Units.KG);
+            double valueTwo = this.quantityMeasurement.GetValue(1000.0, QuantityMeasurement.BaseUnits.Units.GRAMS);
+            Assert.AreEqual( valueOne , valueTwo);
         }
     }
 }
